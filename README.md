@@ -13,3 +13,9 @@ Forward Cloudflare notifications to pushover with Cloudflare worker.
 8. If you wish, you can set up environment variables `WEBHOOK_SECRET` (hide is recommended);
 9. Go to your Cloudflare notifications page and add the Webhook. The `URL` is your worker's URL and the optional secret should be the same as `WEBHOOK_SECRET`;
 10. It should work now;
+
+### Many user to one worker
+
+1. Leave environment variable `WEBHOOK_SECRET` to empty;
+2. Set up environment variable `IS_WEBHOOK_SECRET_USER_KEY` to `1`;
+10. Now, the notification webhook secret will use as the user key;
